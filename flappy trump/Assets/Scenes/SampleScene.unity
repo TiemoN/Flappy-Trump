@@ -711,6 +711,7 @@ GameObject:
   - component: {fileID: 1749078619}
   - component: {fileID: 1749078618}
   - component: {fileID: 1749078621}
+  - component: {fileID: 1749078623}
   - component: {fileID: 1749078622}
   m_Layer: 0
   m_Name: Trump
@@ -778,7 +779,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: ec7807c53173045459e575157412e2ee, type: 3}
+  m_Sprite: {fileID: -6398569299239654920, guid: 4e60ef6ad53960943905b4fb2f1f125a,
+    type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -798,7 +800,7 @@ Transform:
   m_GameObject: {fileID: 1749078617}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -1.579, y: 0.01, z: 0}
-  m_LocalScale: {x: 0.09151463, y: 0.08378949, z: 0.066817775}
+  m_LocalScale: {x: 1.8711685, y: 1.7132151, z: 1.3662002}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
@@ -817,8 +819,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameManager: {fileID: 2142038391}
   velocity: 5.66
---- !u!58 &1749078622
-CircleCollider2D:
+--- !u!70 &1749078622
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -830,9 +832,28 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.25649804, y: 0.4200364}
-  serializedVersion: 2
-  m_Radius: 3.9189212
+  m_Offset: {x: -0.023575608, y: 0.1510996}
+  m_Size: {x: 0.36284876, y: 0.48213324}
+  m_Direction: 0
+--- !u!95 &1749078623
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1749078617}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 6ac871df4c0fbc540ab724b3463f2fe5, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1915082884
 GameObject:
   m_ObjectHideFlags: 0

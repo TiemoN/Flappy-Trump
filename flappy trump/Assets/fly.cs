@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class fly : MonoBehaviour
 {
+    public GameManager gameManager;
     public float velocity = 1;
     private Rigidbody2D rb;
     // Start is called before the first frame update
@@ -20,5 +21,9 @@ public class fly : MonoBehaviour
             //jump
             rb.velocity = Vector2.up * velocity;
         }
+    }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        gameManager.GameOver();
     }
 }

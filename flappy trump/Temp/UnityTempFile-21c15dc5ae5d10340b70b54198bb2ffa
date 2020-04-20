@@ -285,3 +285,6 @@
 /define:CSHARP_7_OR_LATER
 /define:CSHARP_7_3_OR_NEWER
 Assets\fly.cs
+Assets\GameManager.cs
+Assets\MoveLeft.cs
+Assets\Spawner.cs

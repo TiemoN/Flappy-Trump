@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class fly : MonoBehaviour
 {
-    public Animator anim;
+    private Animator anim;
     public GameManager gameManager;
     public GameObject pauseMENU;
     public float velocity = 1;
@@ -23,12 +23,13 @@ public class fly : MonoBehaviour
         {
             //jump
             rb.velocity = Vector2.up * velocity;
-            anim.Play("TrumpFly");
+            anim.SetTrigger("Flap");
         }
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
         gameManager.GameOver();
         pauseMENU.SetActive(false);
+        anim.SetTrigger("Die");
     }
 }

@@ -251,12 +251,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 508461064}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 71c703e6801ba3b4d8aa533bc8862da7, type: 3}
+  m_Script: {fileID: 11500000, guid: f7eb247a57fd29a4eacbef8ff444f0f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxTime: 1.5
+  maxTime: 1.27
   pipe: {fileID: 6247615660355869115, guid: baa4afd56d0cfeb47a8a38461197d16b, type: 3}
-  height: 2.06
+  height: 1.16
+  bossSpawn: 2
 --- !u!4 &508461066
 Transform:
   m_ObjectHideFlags: 0

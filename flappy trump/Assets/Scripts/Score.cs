@@ -5,12 +5,15 @@ using UnityEngine;
 public class Score : MonoBehaviour
 {
     public static int score = 0;
-    private void Start()
+    // Start is called before the first frame update
+    void Start()
     {
         score = 0;
+
     }
- 
-    private void Update()
+
+    // Update is called once per frame
+    void Update()
     {
         GetComponent<UnityEngine.UI.Text>().text = score.ToString();
     }

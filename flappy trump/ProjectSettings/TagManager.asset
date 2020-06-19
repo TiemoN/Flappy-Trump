@@ -3,7 +3,8 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - trigger
   layers:
   - Default
   - TransparentFX
@@ -40,4 +41,22 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: background
+    uniqueID: 2402891605
+    locked: 0
+  - name: pipes
+    uniqueID: 1525043173
+    locked: 0
+  - name: trump
+    uniqueID: 3198098359
+    locked: 0
+  - name: ui
+    uniqueID: 2670271987
+    locked: 0
+  - name: New Layer
+    uniqueID: 411860015
+    locked: 0
+  - name: New Layer
+    uniqueID: 992564717
     locked: 0

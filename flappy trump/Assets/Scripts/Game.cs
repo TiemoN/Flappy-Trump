@@ -8,17 +8,20 @@ public class Game : MonoBehaviour
     private float timer = 0;
     public GameObject pipe;
     public float height;
-    public int bossSpawn;
+   // public static int bossSpawn=2;
     bool hasInstantiated = false;
+   // public GameObject boss;
+   
     //bool Spawn = true;
-
+    bool Show = true;
+   
 
 
     public void Start()
     {
         GameObject newpipe = Instantiate(pipe);
         newpipe.transform.position = transform.position + new Vector3(0, Random.Range(-height, height), 0);
-        
+       
        
     }
   public void Update()
@@ -30,10 +33,13 @@ public class Game : MonoBehaviour
             
         }
         */
-        
-        
 
 
+
+
+
+        if (Show == true)
+        {
             if (timer > maxTime)
             {
                 GameObject newpipe = Instantiate(pipe);
@@ -43,16 +49,22 @@ public class Game : MonoBehaviour
 
             }
             timer += Time.deltaTime;
-
-        
-
-        if (Score.score>bossSpawn)
+           
+        }
+       // else if (Show==false)
         {
-            if (!hasInstantiated)
+          
+        }
+
+
+        //if (Score.score>bossSpawn)
+        {
+           // if (!hasInstantiated)
             {
-                Debug.Log("bosss");
-                hasInstantiated = true;
-                //StopCoroutine("Spawntubes");
+              //  Debug.Log("bosss");
+              
+                //hasInstantiated = true;
+                //Show=false;
             }
         }
        

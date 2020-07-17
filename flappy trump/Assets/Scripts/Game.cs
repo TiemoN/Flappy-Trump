@@ -14,6 +14,9 @@ public class Game : MonoBehaviour
    
    public bool Spawn = true;
    public bool Show = true;
+    private int whatToSpawn;
+    public GameObject coin;
+    public Transform coinSpawn;
   
    
    
@@ -48,10 +51,22 @@ public class Game : MonoBehaviour
                 GameObject newpipe = Instantiate(pipe);
                 newpipe.transform.position = transform.position + new Vector3(0, Random.Range(-height, height), 0);
                 Destroy(newpipe, 15);
+                whatToSpawn = Random.Range(1, 3);
                 timer = 0;
 
             }
             timer += Time.deltaTime;
+            switch (whatToSpawn)
+            {
+                case 1:Instantiate(coin, coinSpawn.position, transform.rotation);
+                    Debug.Log("yeah");
+                    break;
+                case 2:
+                    Debug.Log("dfeh");
+                    break;
+                case 3:;
+                    break;
+            }
            
         }
         else if (Show==false)

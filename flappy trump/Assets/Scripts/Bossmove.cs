@@ -15,14 +15,16 @@ public class Bossmove : MonoBehaviour
     public float rocketLimit=5;
     private bool Phase = true;
     public static int ps = 0;
-
-
+    public GameObject Boss;
+  
+   
 
 
     // Start is called before the first frame update
     void Start()
     {
         animator.gameObject.GetComponent<Animator>().enabled=false;
+       
 
         
        
@@ -37,7 +39,9 @@ public class Bossmove : MonoBehaviour
 
                 animator.gameObject.GetComponent<Animator>().enabled = true;
                 if (Phase==true)
-                { if (SpawnSpeed > maxTIME)
+                {
+                    
+                    if (SpawnSpeed > maxTIME)
                     {
                         Instantiate(missle, SpawnPoint.position, transform.rotation);
                         SpawnSpeed = 0;
@@ -49,6 +53,7 @@ public class Bossmove : MonoBehaviour
                 {
                     Phase = false;
                     animator.gameObject.GetComponent<Animator>().enabled = false;
+                    Boss.SetActive(false);
 
                     ps = 1;
 
@@ -58,5 +63,6 @@ public class Bossmove : MonoBehaviour
     
        
     }
+   
     
 }

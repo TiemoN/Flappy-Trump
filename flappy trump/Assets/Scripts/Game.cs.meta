@@ -3,7 +3,11 @@ guid: f7eb247a57fd29a4eacbef8ff444f0f8
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - pipe: {instanceID: 0}
+  - boss: {instanceID: 0}
+  - coin: {instanceID: 0}
+  - coinSpawn: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

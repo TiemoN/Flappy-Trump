@@ -9,11 +9,18 @@ public class fly : MonoBehaviour
     public GameObject pauseMENU;
     public float velocity = 1;
     private Rigidbody2D rb;
+    private AudioSource audioSource;
+    public AudioClip[] dead;
+    private AudioClip deadclip;
+    
+   
     // Start is called before the first frame update
     void Start()
     {
         anim = gameObject.GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
+        audioSource = GetComponent<AudioSource>();
+       
     }
 
     // Update is called once per frame
@@ -28,8 +35,16 @@ public class fly : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        
         gameManager.GameOver();
-        pauseMENU.SetActive(false);
+       
+        
         anim.SetTrigger("Die");
+        int index = Random.Range(0, dead.Length);
+        deadclip = dead[index];
+        audioSource.clip = deadclip;
+        audioSource.Play();
+
+        pauseMENU.SetActive(false);
     }
 }
